@@ -1,0 +1,668 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap Links:START -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Bootstrap Links:END -->
+
+    <!-- Font Links:START -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Font Links:END -->
+    <!--Icons Library:START  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Icons Library:END  -->
+
+    <link href="styles/index.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- Nav:START -->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand">
+                    <img src="assets/logo.png" alt="Logo" width="60px" height="40px" />
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav list-nav">
+                        <a href="#" class="nav-item nav-link">Home</a>
+                        <a href="#job-circular-section" class="nav-item nav-link">Find Jobs</a>
+                        <a href="#" class="nav-item nav-link">Find Candidates</a>
+                        <a href="#" class="nav-item nav-link">Articles</a>
+                    </div>
+                    <div class="navbar-nav">
+                        <a onclick="openForm('loginModal')" class="nav-item nav-link">Login</a>
+                        <a onclick="openForm('registerModal')" class="nav-item nav-link">Register Now</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Nav:END -->
+
+    <!-- Quotes Section:START -->
+    <section class="quotes-section">
+        <img src="assets/landing_bg.png" alt="Maldives Background" />
+        <div class="text-wrapper">
+            <h2>Top jobs board for professionals</h2>
+            <p>
+                Discover your next career move with over <span>15,000</span>
+                opening vacancies, customer support, software,
+                design anywhere in the world or remotely.
+            </p>
+        </div>
+    </section>
+    <!-- Quotes Section:END -->
+
+    <!------- filters option:START ------->
+    <section class="container-fluid filter-background d-xs-none d-sm-block">
+        <div>
+            <div class="filterhead">
+                Filters
+            </div>
+            <div class="filter-radio-option">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        All Offers
+                    </label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Most Relevent
+                    </label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Recommended
+                    </label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Most Recent
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="search-form">
+            <div class="row ">
+                <div class="col-sm-3">
+                    <form>
+                        <div>
+                            <label class="keyword">Keyword</label>
+                            <input type="text" class="form-control" placeholder="Keyword..." />
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-sm-3">
+                    <form>
+                        <div>
+                            <label class="location">Location</label>
+                            <input type="text" class="form-control" placeholder="Location..." />
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-sm-3">
+                    <form>
+                        <div>
+                            <label class="type_work">Type of Work</label>
+                            <input type="text" class="form-control " placeholder="All Works..." />
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-sm-3">
+                    <form>
+                        <div>
+                            <label class="industries">Industries</label>
+                            <input type="text" class="form-control" placeholder="All Companies..." />
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <button type="button" class="search-button">Search</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!------- filters option:END ------->
+
+
+    <!-- Job Circulars:START -->
+    <section class="job-circular" id="job-circular-section">
+        <h1>Featured Job Circulars</h1>
+        <div class="job-cards">
+            <!-- <div class="job-card">
+                    <div class="job-card-header">
+                        <div class="job-card-img">
+                            <img src="assets/microsoft.png" alt=""/>
+                        </div>
+                        <div class="company">
+                            <div class="job-card-company-name">
+                                Microsoft
+                            </div>
+                            <div class="job-card-place">
+                                Remote
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="job-card-title">
+                        Senior UI Designer
+                    </div>
+
+                    <div class="job-card-type">
+                        Fulltime
+                    </div>
+    
+                    <div class="job-card-desc">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make 
+                        a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing 
+                        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </div>
+    
+                    <div class="job-card-footer">
+                        <div class="job-card-salary">
+                            <span class="job-card-salary-currency">$</span><span class="job-card-salary-amount">2500</span>/<span class="job-card-salary-term">month</span>
+                        </div>
+    
+                        <button>
+                            Apply Now
+                        </button>
+                    </div>
+                </div> -->
+        </div>
+        <div class="load-more" onclick="loadMoreJobs()">
+            <button>
+                Find More Jobs
+            </button>
+        </div>
+    </section>
+    <!-- Job Circulars:END -->
+
+    <!--employee-interview  carousel section:START-->
+    <section class="text-center pt-5 pb-5   ">
+        <h1 class="carousel-heading">Our Employees Interviews</h1>
+        <div id="employee-interviews" class="carousel slide " data-ride="carousel">
+            <div class="carousel-inner  ">
+
+                <div class="carousel-item active  ">
+                    <div class="row mt-3 d-flex justify-content-center">
+                        <div class="col-md-2">
+                            <div class="popup" onclick="employee_popup_on()"><img class=" carousel-pointer"
+                                    src="./assets/employee.jpg" />
+                                <embed class="popupvideo" src="https://www.youtube.com/embed/K8S8OvPhMDg">
+                            </div>
+                            <div>
+                                <h6 class="carousel-employee-name">Julie Adam</h6>
+                                <h6 class="profession">Senior Consultant</h6>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-2 ">
+                            <div class="popup" onclick="employee_popup_on()"><img class=" carousel-pointer"
+                                    src="./assets/employee.jpg" />
+
+                                <embed class="popupvideo" src="https://www.youtube.com/embed/K8S8OvPhMDg">
+                            </div>
+                            <div>
+                                <h6 class="carousel-employee-name">Julie Adam</h6>
+                                <h6 class="profession">Senior Consultant</h6>
+                            </div>
+                        </div>
+                        <div class="col-md-2 ">
+                            <div class="popup" onclick="employee_popup_on()"><img class=" carousel-pointer"
+                                    src="./assets/employee.jpg" />
+                                <embed class="popupvideo" id="popup1" src="https://www.youtube.com/embed/K8S8OvPhMDg">
+                            </div>
+                            <div>
+                                <h6 class="carousel-employee-name">Julie Adam</h6>
+                                <h6 class="profession">Senior Consultant</h6>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 ">
+                            <div class="popup" onclick="employee_popup_on()"><img class=" carousel-pointer"
+                                    src="./assets/employee.jpg" />
+                                <embed class="popupvideo" id="" src="https://www.youtube.com/embed/K8S8OvPhMDg">
+                            </div>
+                            <div>
+                                <h6 class="carousel-employee-name">Julie Adam</h6>
+                                <h6 class="profession">Senior Consultant</h6>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row mt-3 d-flex justify-content-center">
+
+                        <div class="col-md-2">
+                            <div class="popup" onclick="employee_popup_on()"><img class=" carousel-pointer"
+                                    src="./assets/employee.jpg" />
+                                <embed class="popupvideo" id="" src="https://www.youtube.com/embed/K8S8OvPhMDg">
+                            </div>
+                            <div>
+                                <h6 class="carousel-employee-name">Julie Adam</h6>
+                                <h6 class="profession">Senior Consultant</h6>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="popup" onclick="employee_popup_on()"><img class=" carousel-pointer"
+                                    src="./assets/employee.jpg" />
+                                <embed class="popupvideo" id="" src="https://www.youtube.com/embed/K8S8OvPhMDg">
+                            </div>
+                            <div>
+                                <h6 class="carousel-employee-name">Julie Adam</h6>
+                                <h6 class="profession">Senior Consultant</h6>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 ">
+                            <div class="popup" onclick="employee_popup_on()"><img class=" carousel-pointer"
+                                    src="./assets/employee.jpg" />
+                                <embed class="popupvideo" id="" src="https://www.youtube.com/embed/K8S8OvPhMDg">
+                            </div>
+
+                            <div>
+                                <h6 class="carousel-employee-name">Julie Adam</h6>
+                                <h6 class="profession">Senior Consultant</h6>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 ">
+                            <div class="popup" onclick="employee_popup_on()"><img class=" carousel-pointer"
+                                    src="./assets/employee.jpg" />
+                                <embed class="popupvideo" id="" src="https://www.youtube.com/embed/K8S8OvPhMDg">
+                            </div>
+                            <div>
+                                <h6 class="carousel-employee-name">Julie Adam</h6>
+                                <h6 class="profession">Senior Consultant</h6>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row mt-3 d-flex justify-content-center">
+
+
+
+                        <div class="col-md-2 ">
+                            <div class="popup" onclick="employee_popup_on()"><img class=" carousel-pointer"
+                                    src="./assets/employee.jpg" />
+                                <embed class="popupvideo" id="" src="https://www.youtube.com/embed/K8S8OvPhMDg">
+                            </div>
+                            <div>
+                                <h6 class="carousel-employee-name">Julie Adam</h6>
+                                <h6 class="profession">Senior Consultant</h6>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 ">
+                            <div class="popup" onclick="employee_popup_on()"><img class="carousel-pointer"
+                                    src="./assets/employee.jpg" />
+                                <embed class="popupvideo" id="" src="https://www.youtube.com/embed/K8S8OvPhMDg">
+                            </div>
+                            <div>
+                                <h6 class="carousel-employee-name">Julie Adam</h6>
+                                <h6 class="profession">Senior Consultant</h6>
+                            </div>
+                        </div>
+                        <div class="col-md-2 ">
+                            <div class="popup" onclick="employee_popup_on()"><img class=" carousel-pointer"
+                                    src="./assets/employee.jpg" />
+                                <embed class="popupvideo" id="" src="https://www.youtube.com/embed/K8S8OvPhMDg">
+                            </div>
+                            <div>
+                                <h6 class="carousel-employee-name">Julie Adam</h6>
+                                <h6 class="profession">Senior Consultant</h6>
+                            </div>
+                        </div>
+                        <div class="col-md-2 ">
+                            <div class="popup" onclick="employee_popup_on()"><img class=" carousel-pointer"
+                                    src="./assets/employee.jpg" />
+                                <embed class="popupvideo" id="" src="https://www.youtube.com/embed/K8S8OvPhMDg">
+                            </div>
+                            <div>
+                                <h6 class="carousel-employee-name">Julie Adam</h6>
+                                <h6 class="profession">Senior Consultant</h6>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <a class="carousel-control-prev" href="#employee-interviews" role="button" data-slide="prev">
+                <i class="fa-solid fa-chevron-left"></i>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#employee-interviews" role="button" data-slide="next">
+                <i class="fa-solid fa-chevron-right"></i>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+    </section>
+    <!--employee-interview carousel section:END-->
+
+    <!--sponsores carosel section:SATRT-->
+    <section class="container-fluid">
+             
+        <div class="sponsors-head text-center">
+          Our Sponsors
+        </div>
+
+        <!-------Desktop View :start--------->
+         <div class="d-none d-lg-block d-xl-block mt-4">
+          <div id="sponsors-desktop" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner  ">
+              <div class="carousel-item active  ">
+                <div class ="row mt-3 d-flex justify-content-center">
+
+                  <div class="col-md-2">
+                    <img src="./assets/NYA.png" alt="NYA" class="carousel-pointer sponsors-pointers ml-5"></img>
+                  </div>
+  
+                  <div class="col-md-2">
+                    <img src="./assets/Funding-Circle.png" alt="Funding-Circle" class="  sponsors-pointers carousel-pointer ml-5"></img>
+                  </div>
+  
+                  <div class="col-md-2">
+                    <img src="./assets/KIWI.COM.png" alt="KIWI.COM" class="carousel-pointer  sponsors-pointers ml-3"></img>
+                  </div>
+  
+                  <div class="col-md-2">
+                    <img src="./assets/samsara.png" alt="samsara" class="carousel-pointer  sponsors-pointers "></img>
+                  </div>
+  
+                  <div class="col-md-2">
+                    <img src="./assets/pluralsight.png" alt="pluralsight" class="carousel-pointer  sponsors-pointers"></img>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class ="row mt-3 d-flex justify-content-center">
+
+                  <div class="col-md-2">
+                    <img src="./assets/NYA.png" alt="NYA" class="carousel-pointer sponsors-pointers  ml-5"></img>
+                  </div>
+  
+                  <div class="col-md-2">
+                    <img src="./assets/Funding-Circle.png" alt="Funding-Circle" class="carousel-pointer  sponsors-pointers ml-5"></img>
+                  </div>
+  
+                  <div class="col-md-2">
+                    <img src="./assets/KIWI.COM.png" alt="KIWI.COM" class="carousel-pointer sponsors-pointers  ml-3"></img>
+                  </div>
+  
+                  <div class="col-md-2">
+                    <img src="./assets/samsara.png" alt="samsara" class="carousel-pointer  sponsors-pointers"></img>
+                  </div>
+  
+                  <div class="col-md-2">
+                    <img src="./assets/pluralsight.png" alt="pluralsight" class=" sponsors-pointers carousel-pointer"></img>
+                  </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#sponsors-desktop" role="button" data-slide="prev">
+                <i class="fa-solid fa-chevron-left"></i>
+                <span class="sr-only">Previous</span>
+              </a>
+
+              <a class="carousel-control-next" href="#sponsors-desktop" role="button" data-slide="next">
+                <i class="fa-solid fa-chevron-right"></i>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </div> 
+        <!-------Desktop View :End--------->
+
+        <!-------Ipad View : Start--------->
+        <div class="d-none d-sm-block  d-lg-none mt-3">
+          <div id="sponsors-ipad" class="carousel slide " data-ride="carousel">
+            <div class="carousel-inner  ">
+              <div class="carousel-item active  ">
+                <div class ="row mt-3 d-flex justify-content-center">
+  
+                  <div class="col-3">
+                    <img src="./assets/NYA.png" alt="NYA" class="carousel-pointer sponsors-pointers "></img>
+                  </div>
+  
+                  <div class="col-3">
+                    <img src="./assets/Funding-Circle.png" alt="Funding-Circle" class="carousel-pointer sponsors-pointers "></img>
+                  </div>
+                  
+                  <div class="col-md-3">
+                    <img src="./assets/KIWI.COM.png" alt="KIWI.COM" class="carousel-pointer sponsors-pointers "></img>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="carousel-item">
+                <div class ="row mt-3 d-flex justify-content-center">
+                  <div class="col-md-3">
+                    <img src="./assets/samsara.png" alt="samsara" class="carousel-pointer sponsors-pointers"></img>
+                  </div>
+  
+                  <div class="col-md-3">
+                    <img src="./assets/pluralsight.png" alt="pluralsight" class="carousel-pointer sponsors-pointers"></img>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+  
+            <a class="carousel-control-prev" href="#sponsors-ipad" role="button" data-slide="prev">
+              <i class="fa-solid fa-chevron-left"></i>
+              <span class="sr-only">Previous</span>
+            </a>
+
+            <a class="carousel-control-next" href="#sponsors-ipad" role="button" data-slide="next">
+              <i class="fa-solid fa-chevron-right"></i>
+              <span class="sr-only">Next</span>
+            </a>
+
+          </div>
+        </div>
+        <!-------Ipad View : End--------->
+
+        <!-------Mobile View :Start--------->
+        <div class="col-sm-12 text-center d-xs-block d-md-none d-lg-none">
+          <div id="sponsors-small-phone" class="carousel slide " data-ride="carousel">
+            <div class="carousel-inner  ">
+              <div class="carousel-item active">
+                  <div class="sponsors-image mt-5">
+                    <img src="./assets/NYA.png" alt="NYA" class="carousel-pointer sponsors-pointers-mobile"></img>
+                  </div>
+
+                  <div class="sponsors-image" >
+                    <img src="./assets/Funding-Circle.png" alt="Funding-Circle" class="carousel-pointer sponsors-pointers-mobile"></img>
+                  </div>
+
+                  <div class="sponsors-image">
+                    <img src="./assets/KIWI.COM.png" alt="KIWI.COM" class="carousel-pointer sponsors-pointers-mobile"></img>
+                  </div>
+
+                  <div class="sponsors-image">
+                    <img src="./assets/samsara.png" alt="samsara" class="carousel-pointer sponsors-pointers-mobile"></img>
+                  </div>
+
+                  <div class="sponsors-image">
+                    <img src="./assets/pluralsight.png" alt="pluralsight" class="carousel-pointer sponsors-pointers-mobile"></img>
+                  </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="sponsors-image mt-5">
+                  <img src="./assets/NYA.png" alt="NYA" class="carousel-pointer sponsors-pointers-mobile"></img>
+                </div>
+
+                <div class="sponsors-image" >
+                  <img src="./assets/Funding-Circle.png" alt="Funding-Circle" class="carousel-pointer sponsors-pointers-mobile"></img>
+                </div>
+
+                <div class="sponsors-image">
+                  <img src="./assets/KIWI.COM.png" alt="KIWI.COM" class="carousel-pointer sponsors-pointers-mobile"></img>
+                </div>
+
+                <div class="sponsors-image">
+                  <img src="./assets/samsara.png" alt="samsara" class="carousel-pointer sponsors-pointers-mobile"></img>
+                </div>
+
+                <div class="sponsors-image">
+                  <img src="./assets/pluralsight.png" alt="pluralsight" class="carousel-pointer sponsors-pointers-mobile"></img>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#sponsors-small-phone" role="button" data-slide="prev">
+              <i class="fa-solid fa-chevron-left"></i>
+              <span class="sr-only">Previous</span>
+            </a>
+
+            <a class="carousel-control-next" href="#sponsors-small-phone" role="button" data-slide="next">
+              <i class="fa-solid fa-chevron-right"></i>
+              <span class="sr-only">Next</span> 
+            </a>       
+          </div>   
+        </div>
+        <!-------Mobile View :End--------->
+    </section>
+    <!--sponsores carosel section:END-->  
+
+    <!--subscribe button section:SATRT-->
+    <section class="subscribe_section text-center pt-5 pb-5 ">
+  
+      <h2>
+        Never Want To Miss <br>Any <span class="subscribe-text">Job News ?</span>        
+      </h2>
+      <div class="subscribe-btn-wrapper">
+       <input type="email" class=" subscribe-btn-box"/><button class="subscribe-button">subscribe</button>
+      </div>
+    </section>
+    <!--subscribe button section:END-->
+
+    <div class="container-fluid empty"></div>
+
+    <!--Video Wrapper:START-->
+    <div class="video-wrapper">
+        <embed class="popupvideo" src="https://www.youtube.com/embed/WkBKap-2LeA">
+    </div>
+    <!--Video Wrapper:END-->
+
+    <!-- Overlay:START -->
+    <div class="overlay" onclick=employee_popup_off()></div>
+    <!-- Overlay:END -->
+
+    <!-- Log in Modal :START -->
+    <div class="mainButton">
+        <div class="loginModal">
+            <div class="close-button" onclick="closeForm()">x</div>
+            <div class="form-title">Sign In</div>
+            <div class="input-group">
+                <input type="email" id="email" onblur="checkInput(this)" />
+                <label for="email">Registered Email</label>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" onblur="checkInput(this)" />
+                <label for="password">Password</label>
+            </div>
+            <div class="form-button submit" onclick="">Login</div>
+        </div>
+    </div>
+    <!-- Log in Modal :END -->
+    <!-- Register Modal :START -->
+    <div class="mainButton">
+        <div class="registerModal">
+            <div class="close-button" onclick="closeForm('registerModal')">x</div>
+            <div class="form-title">Sign Up</div>
+            <div class="input-group">
+                <input type="text" id="registerName" onblur="checkInput(this)" />
+                <label for="registerName">Name</label>
+            </div>
+            <div class="input-group">
+                <input type="tel" id="registerPhoneNumber" onblur="checkInput(this)" />
+                <label for="registerPhoneNumber">Phone</label>
+            </div>
+            <div class="input-group">
+                <input type="email" id="registerEmail" onblur="checkInput(this)" />
+                <label for="registerEmail">User email</label>
+            </div>
+            <div class="input-group">
+                <input type="password" id="registerPassword" onblur="checkInput(this)" />
+                <label for="registerPassword">Password</label>
+            </div>
+            <div class="form-button submit" onclick="">Register</div>
+        </div>
+    </div>
+    <!-- Register Modal :END -->
+
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> -->
+    <script src="srcipts/index.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+<!-- Questions
+
+1) Reduntant Job type? / place?
+2) Salary Annum?
+3) $ -> maldives currency?  MVR/RF/Mrf ?
+4) forget password
+-->
+
+<!-- TO do
+    Confirm password
+    terms and conditions
+    Forget password 
+-->
+
+
+<!-- Questions for Client:
+1) is that anyone can apply for any other users?
+2) How to notify the organization?
+3) what is article, what should be there?
+4) subcribe newsletter?
+-->

@@ -1,0 +1,756 @@
+/* ---------- Resetting styles:START ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------- Resetting styles:END ---------- */
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+/* ---------- Nav:START ---------- */
+
+.list-nav {
+  margin: auto;
+  gap: 2em;
+}
+
+.nav-link {
+  cursor: pointer;
+  color: #000;
+  border-radius: 8px;
+}
+
+a.nav-item.nav-link:hover {
+  color: #fff;
+  background: #18B2F3;
+}
+
+.navbar-toggler {
+  position: relative;
+}
+
+.navbar-toggler-icon {
+  color: #18B2F3;
+}
+
+.fa-solid.fa-bars {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.navbar-toggler:hover {
+  background-color: #18B2F3;
+}
+
+.navbar-toggler:hover span {
+  background-color: #18B2F3;
+  color: #fff;
+}
+
+
+/* ---------- Nav:END ---------- */
+
+/* ---------- Quotes Section:START ---------- */
+.quotes-section {
+  position: relative;
+  color: #fff;
+}
+
+.quotes-section>img {
+  width: 100%;
+  background-color: #18B2F3;
+}
+
+.quotes-section>.text-wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.quotes-section>.text-wrapper>h2 {
+  font-size: 2em;
+  margin-bottom: 24px;
+}
+
+.quotes-section>.text-wrapper>p {
+  font-weight: 200;
+}
+
+.quotes-section>.text-wrapper>p>span {
+  font-weight: 500;
+}
+
+/* ---------- Quotes Section:END ---------- */
+
+
+
+
+/* ---------- Job Circulars Section:START ---------- */
+.job-circular {
+  margin: 20px;
+  width: calc(100% - 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+}
+
+.job-circular>.job-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.job-circular>.job-cards>.job-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 23%;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  font-size: 12px;
+}
+
+
+.job-circular>.job-cards>.job-card>.job-card-header {
+  display: flex;
+  gap: 15px;
+}
+
+.job-circular>.job-cards>.job-card>.job-card-header>.company {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.job-circular>.job-cards>.job-card>.job-card-header>.job-card-img {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+}
+
+.job-circular>.job-cards>.job-card>.job-card-header>.company>.job-card-company-name {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.job-circular>.job-cards>.job-card>.job-card-header>.company>.job-card-place {
+  font-size: 12px;
+}
+
+.job-circular>.job-cards>.job-card>.job-card-title {
+  font-weight: 600;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.job-circular>.job-cards>.job-card>.job-card-type {
+  margin-bottom: 10px;
+}
+
+.job-circular>.job-cards>.job-card>.job-card-desc {
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+.job-circular>.job-cards>.job-card>.job-card-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+.job-circular>.job-cards>.job-card>.job-card-footer>button,
+.job-circular>.load-more>button {
+  color: #18B2F3;
+  border: none;
+  background-color: transparent;
+  padding: 5px;
+  /* font-size: 18px; */
+}
+
+.job-circular>.job-cards>.job-card>.job-card-footer>button:hover,
+.job-circular>.load-more>button:hover {
+  cursor: pointer;
+  border-radius: 8px;
+  color: #fff;
+  background: #18B2F3;
+}
+
+.job-circular>.load-more>button {
+  padding: 8px;
+  border: 2px solid #18B2F3;
+  border-radius: 5px;
+}
+
+
+/* ---------- Job Circulars Section:END ---------- */
+
+/*  ---------- Login & Register Modal : START ---------- */
+
+.mainButton {
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 24px;
+  font-weight: 200;
+  overflow: hidden;
+  position: relative;
+  border-radius: 2px;
+  letter-spacing: 2px;
+  box-shadow: 0 1px 3px #0000001f, 0 1px 2px #0000003d;
+  text-transform: uppercase;
+  background-color: #00a7ee;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.mainButton .btn-text {
+  z-index: 2;
+  display: block;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.mainButton .btn-text:hover {
+  cursor: pointer;
+}
+
+.mainButton:after {
+  top: -50%;
+  z-index: 1;
+  content: "";
+  width: 150%;
+  height: 200%;
+  position: absolute;
+  left: calc(-150% - 40px);
+  background-color: #ffffff33;
+  -webkit-transform: skewX(-40deg);
+  -moz-transform: skewX(-40deg);
+  -ms-transform: skewX(-40deg);
+  -o-transform: skewX(-40deg);
+  transform: skewX(-40deg);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.mainButton:hover {
+  cursor: default;
+  box-shadow: 0 10px 20px #00000030, 0 6px 6px #0000003b;
+}
+
+.mainButton:hover:after {
+  -webkit-transform: translateX(100%) skewX(-30deg);
+  -moz-transform: translateX(100%) skewX(-30deg);
+  -ms-transform: translateX(100%) skewX(-30deg);
+  -o-transform: translateX(100%) skewX(-30deg);
+  transform: translateX(100%) skewX(-30deg);
+}
+
+.mainButton.active {
+  box-shadow: 0 19px 38px #0000004d, 0 15px 12px #00000038;
+}
+
+.mainButton.active .loginModal,
+.mainButton.active .registerModal {
+  -webkit-transform: scale(1, 1);
+  -moz-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -o-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+
+.mainButton .loginModal,
+.mainButton .registerModal {
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: inherit;
+  transform-origin: center center;
+  background-image: linear-gradient(to top left, #00a7ee 10%, #55ccff 65%, #fff 200%);
+  -webkit-transform: scale(0.000001, 0.00001);
+  -moz-transform: scale(0.000001, 0.00001);
+  -ms-transform: scale(0.000001, 0.00001);
+  -o-transform: scale(0.000001, 0.00001);
+  transform: scale(0.000001, 0.00001);
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.close-button {
+  top: 20px;
+  right: 20px;
+  position: absolute;
+  -webkit-transition: opacity 0.2s ease-in;
+  -moz-transition: opacity 0.2s ease-in;
+  -ms-transition: opacity 0.2s ease-in;
+  -o-transition: opacity 0.2s ease-in;
+  transition: opacity 0.2s ease-in;
+}
+
+.close-button:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.form-title {
+  margin-bottom: 15px;
+}
+
+.form-button {
+  width: 100%;
+  padding: 10px;
+  color: #00a7ee;
+  margin-top: 10px;
+  max-width: 400px;
+  text-align: center;
+  border: solid 1px #fff;
+  background-color: #fff;
+  -webkit-transition: color 0.2s ease-in, background-color 0.2s ease-in;
+  -moz-transition: color 0.2s ease-in, background-color 0.2s ease-in;
+  -ms-transition: color 0.2s ease-in, background-color 0.2s ease-in;
+  -o-transition: color 0.2s ease-in, background-color 0.2s ease-in;
+  transition: color 0.2s ease-in, background-color 0.2s ease-in;
+}
+
+.form-button:hover {
+  color: #fff;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.input-group {
+  width: 100%;
+  font-size: 16px;
+  max-width: 400px;
+  padding-top: 20px;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.input-group input {
+  width: 100%;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 5px 0;
+  line-height: 1;
+  font-size: 16px;
+  font-family: "Raleway";
+  border-bottom: solid 1px #fff;
+  background-color: transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  -ms-transition: box-shadow 0.2s ease-in;
+  -o-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+}
+
+.input-group input+label {
+  left: 0;
+  top: 20px;
+  position: absolute;
+  pointer-events: none;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.input-group input:focus {
+  box-shadow: 0 1px 0 0 #fff;
+}
+
+.input-group input:focus+label,
+.input-group input.active+label {
+  font-size: 12px;
+  -webkit-transform: translateY(-20px);
+  -moz-transform: translateY(-20px);
+  -ms-transform: translateY(-20px);
+  -o-transform: translateY(-20px);
+  transform: translateY(-20px);
+}
+
+/*  ---------- Login & Register Modal : END ---------- */
+
+/* Responsiveness :START */
+@media only screen and (max-width: 1024px) {
+
+  .list-nav {
+    gap: 0;
+  }
+
+  .nav-link:hover {
+    padding-left: 5px;
+    background-color: #18B2F3;
+    color: #fff;
+  }
+
+  .quotes-section>img {
+    height: 25vh;
+  }
+
+  .quotes-section>.text-wrapper {
+    width: 80%;
+  }
+
+  .quotes-section>.text-wrapper>h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+
+  .quotes-section>.text-wrapper>p {
+    font-size: 0.6em;
+  }
+
+  .job-circular>.job-cards>.job-card>.job-card-footer {
+    flex-direction: column;
+  }
+
+  .job-circular>.job-cards>.job-card {
+    display: block;
+    width: 30%;
+  }
+
+}
+
+
+@media only screen and (max-width: 768px) {
+  .job-circular {
+    margin: 5px;
+  }
+
+  .job-circular>h1 {
+    text-align: center;
+  }
+
+  .job-circular>.job-cards>.job-card {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .job-circular>.job-cards>.job-card {
+    display: flex;
+  }
+
+  .job-circular>.job-cards>.job-card>.job-card-footer>.job-card-salary {
+    font-size: 0.8em;
+  }
+}
+
+/* Responsiveness :END */
+
+
+
+/* Filter:START */
+.filter-background {
+  background-color: #f6f7fc;
+}
+
+.keyword {
+  font-weight: bold;
+}
+
+.location {
+  font-weight: bold;
+}
+
+.type_work {
+  font-weight: bold;
+}
+
+.industries {
+  font-weight: bold;
+}
+
+.search-button {
+  background-color: #18B2F3;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+
+  padding: 0.5rem 2.5rem 0.5rem 2.5rem;
+}
+
+@media (max-width: 575px) {
+  .filterhead {
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+    padding-top: 2rem;
+    font-weight: bold;
+  }
+
+  .filter-radio-option {
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+    margin-top: 1rem;
+  }
+
+  .search-form {
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .filterhead {
+    margin-left: 1.6rem;
+    margin-right: 1.6rem;
+    padding-top: 2rem;
+    font-weight: bold;
+
+  }
+
+  .filter-radio-option {
+    margin-left: 1.6rem;
+    margin-right: 1.6rem;
+    margin-top: 1rem;
+  }
+
+  .search-form {
+    margin-left: 1.6rem;
+    margin-right: 1.6rem;
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .filterhead {
+    margin-left: 5.8rem;
+    margin-right: 5.8rem;
+    padding-top: 2rem;
+    font-weight: bold;
+
+  }
+
+  .filter-radio-option {
+    margin-left: 5.8rem;
+    margin-right: 5.8rem;
+    margin-top: 1rem;
+  }
+
+  .search-form {
+    margin-left: 5.8rem;
+    margin-right: 5.8rem;
+    margin-top: 2rem;
+  }
+
+}
+
+/* Filter:END */
+
+
+/* Carosuel:START */
+.profession {
+  font-size: 1.47rem;
+  color: #18B2F3;
+}
+
+.carousel-employee-name {
+  font-size: 1.5rem;
+}
+
+.carousel-heading {
+  color: black;
+  font-size: 3rem;
+}
+
+.carousel-pointer {
+  cursor: pointer;
+}
+
+.fa-solid.fa-chevron-left,
+.fa-solid.fa-chevron-right {
+  color: #18B2F3;
+  font-size: 2em;
+}
+
+.popup .popupvideo {
+  z-index: 1;
+  display: none;
+  position: relative;
+}
+
+.popup .show {
+  display: block;
+  width: 30 rem;
+  height: 20 rem;
+}
+
+.overlay {
+  position: fixed;
+  /* Sit on top of the page content */
+  display: none;
+  /* Hidden by default */
+  width: 100%;
+  /* Full width (cover the whole page) */
+  height: 100%;
+  /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Black background with opacity */
+  z-index: 2;
+  /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer;
+  /* Add a pointer on hover */
+}
+
+.video-wrapper {
+  display: none;
+  height: 100vh;
+}
+
+.video-wrapper>.popupvideo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  width: 80vw;
+  height: calc(100vw/3);
+}
+
+.carousel-pointer {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: contain
+}
+
+/* Carosuel:END */
+
+/* Sponsores carosuel:START*/
+.sponsors-head
+{
+    font-weight:500;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    margin-top: 0.8rem;
+}
+.sponsors-pointers{
+  width:90%;
+  height: 90%;
+}
+.sponsors-pointers-mobile{
+  width:50%;
+}
+
+@media (max-width:485px)
+{
+    .sponsors-image{
+        margin-top: 1.2rem;
+    }
+}
+
+@media(max-width:767px)
+{
+    #sponsors-ipad{
+        display: none;
+    }
+}
+/* Sponsores carosuel:END*/
+
+/* subscribe_section  css :START */
+.subscribe-text{
+  color:#18B2F3;
+  font-weight: bolder;
+}
+.subscribe_section{
+  font-size: 2.8rem;
+  color: black;
+  border: 0.5px solid rgb(231, 227, 227);
+  border-radius: 25px;
+  padding-top: 2rem;
+  padding-bottom: 3rem; 
+  margin-left: 10rem;
+  margin-right:10rem;  
+  margin-top: 7rem;
+  /* margin-bottom: 30rem;  */
+  box-shadow: 2px 2px rgb(233, 226, 226);
+  display: flex;
+  justify-content:   space-around;
+ }
+.subscribe-btn-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+}
+.subscribe-btn-wrapper>input{
+  font-size: 22px;
+  transform: scaleY(1.5);
+}
+
+.subscribe-btn-box{
+  box-shadow: 2px 2px rgb(233, 226, 226); 
+border: 0.5px solid rgb(231, 227, 227);
+border-radius: 50px;
+display: grid; 
+padding: 0.2rem;
+}
+.subscribe-button{
+  position: absolute;
+  align-self: end;
+  background-color: #18B2F3;
+  border-radius: 2rem;
+  color:white;
+  font-size: 1.2rem;
+  border:none;
+  padding: 0.5rem;
+  width:7rem;
+}
+.empty{
+  height: 16rem;
+} 
+
+/* subscribe_section  css :END*/
